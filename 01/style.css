@@ -12,15 +12,13 @@
 .container {
     background-color: black;
     height: 100vh;
-   
+    
 }
 
 .container .index {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('images/goldfish.jpg');
-  height: 100vh;
-  display: block;
-  margin: auto;
   
+  height: 100vh;
   background-repeat: no-repeat;
     /* 하이트 특성상 세로는 100%가 힘들다
     그래서 확실하게 적용될 수있는 단위인 뷰포트단위인 vh를 적용시킴 */
@@ -183,6 +181,5 @@
 .container .galleryWrap .gallery img {
     width: 100%;
     height: auto;
-   
 
 }
