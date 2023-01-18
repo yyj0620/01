@@ -85,7 +85,7 @@
 }
 
 .container .nav ul li a:hover {
-    color: #1fdfdf;
+    color: red;
 }
 
 /* hover:마우스를 올렸을 때 색이 변하게 함 */
