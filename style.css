@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'abster';
+    src: url('font/abster-webfont.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: black;
+    height: 100vh;
+    
+}
+
+.container .index {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('images/goldfish.jpg');
+  
+  height: 100vh;
+  background-repeat: no-repeat;
+    /* 하이트 특성상 세로는 100%가 힘들다
+    그래서 확실하게 적용될 수있는 단위인 뷰포트단위인 vh를 적용시킴 */
+}
+
+
+
+/* 
+두개의 css로 분리를 하는 방법도 있지만 이렇게 클래스를 추가로 부여해서 분리해주는 방법도 있습니다. 
+
+우리는 index에만 금붕어를 넣을 것이기 때문에 index.html의 container에는 index라는 클래스를 임시적으로 부여했고.
+
+.container.index{} 선택자를 보면 중간에 공란이라던지 '>' 자식 으로 타고 들어가는 선택자가 없는걸 알아차리셨을검다
+
+이거는 container이자 index라는 클래스를 가진 태그를 선택하는 선택자입니다. 조금더 세세한 선택이 가능한 것이죠
+*/
+
+
+.container .header {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* h1이 맨 왼쪽, calss nav영역이 맨 오른쪽으로.
+    영역이 항상좌우끝으로 붙어있게 함 */
+    align-items: center;
+    /* 80px높이를 기준으로 요소가 수직방향의 중앙에 배치되게 함 */
+}
+
+
+.container .header h1 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'abster';
+}
+
+.container .header h5 a {
+    text-decoration: none;
+    color: white;
+    width: 182px;
+    display: inline-block;
+    text-align: center;
+    /* 
+        a 태그가 인라인 속성을 가지고 있어서
+        너비를 지정해주고 display 속성을 inline-block으로 변경해주기.
+
+        portfolio에 링크를 따로 걸기 위해서 
+        a태그를 쓴거면 어쩔 수 없지만
+        보통 이런 디자인의 경우 이미지.png를 쓰긴 함
+
+    */
+}
+
+.container .nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    /* li태그 사이에 간격이 주어지게 함 */
+}
+
+.container .nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.container .nav ul li a:hover {
+    color: #1fdfdf;
+}
+
+/* hover:마우스를 올렸을 때 색이 변하게 함 */
+
+
+.container .hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p {
+    font-size: 19px;
+}
+
+.container .hero button {
+    background: none;
+    border: 2px solid #1fdfdf;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.container .hero button:hover {
+    background-color: darkslategray;
+}
+
+.container .hero button a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: BusanFont_Provisional;
+}
+
+.container .love {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 80px);
+    ;
+
+}
+
+.container .love a {
+    text-decoration: none;
+    color: white;
+    font-size: 80px;
+
+}
+
+.container .love a:hover {
+    color: palevioletred;
+}
+
+/* .container .galleryWrap{
+    width: 80%;
+    margin: 40px auto;
+    border: 1px solid red;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .galleryWrap .gallery{
+    width: calc((100% / 3) - 20px);
+    margin: 10px;
+    border: 1px solid black;
+    list-style: none;
+}
+.container .galleryWrap .gallery img{
+    width: 100%;
+    height: auto;
+} */
+.container .galleryContainer {
+    /* width값을 나중에는 1200px에 맞춰서 레이아웃을 한번 만들어보십시오 !  */
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* overflow : hidden은 지정한 width값 80%를 제외한 나머지 넘치는 부분을 숨긴다는 뜻 */
+}
+
+.container .galleryWrap .gallery img {
+    width: 100%;
+    height: auto;
+
+}
